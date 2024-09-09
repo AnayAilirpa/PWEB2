@@ -1,124 +1,16 @@
-# Tabel Isi
-- [Instalasi](#jobsheet1)
-- [Penggunaan](#penggunaan)
-- [Kontribusi](#kontribusi)
-- [Lisensi](#lisensi)
-- [Kontak](#kontak)
+## Tentang Saya 👋🏻
+![Nama](https://img.shields.io/badge/Nama-Yana_Aprilia-forestgreen.svg)  
+![Kelas](https://img.shields.io/badge/Kelas-TI--2B-forestgreen.svg)  
+![NIM](https://img.shields.io/badge/NIM-230202047-forestgreen.svg)  
 
-## Instalasi
-Untuk menjalankan aplikasi ini di lokal, ikuti langkah-langkah berikut:
+## Daftar Isi 📃
+- [Jobsheet 1](Jobsheet1/README.md#Jobsheet1)
+- [Jobsheet 2](Jobsheet2/README.md#Jobsheet2)
+- [Jobsheet 3](Jobsheet2/README.md#Jobsheet3)
 
-1. Clone repositori ini:
-    ```bash
-    git clone https://github.com/username/waste-price-calculator.git
-    ```
-2. Masuk ke direktori proyek:
-    ```bash
-    cd waste-price-calculator
-    ```
-3. Instal dependensi yang diperlukan:
-    ```bash
-    npm install
-    ```
-4. Jalankan aplikasi:
-    ```bash
-    npm start
-    ```
+# Pendahuluan 📢
+Repository ini dibuat untuk memenuhi tugas mata kuliah Praktikum Pemrograman Web 2. Terdiri dari Jobsheet 1 sampai dengan Jobsheet 2 yang membahas tentang OOP dalam PHP. OOP (Object-Oriented Programming) sendiri ialah paradigma pemrograman yang berfokus pada konsep objek. Konsep dasar Object-Oriented Programming (OOP) terdiri dari empat pilar utama: Encapsulation, Inheritance, Polymorphism, dan Abstraction. Di repository ini saya akan memberikan penjelasan secara singkat dari masing-masing konsep tersebut.
 
-## Penggunaan
-Setelah menginstal, buka aplikasi di browser dengan mengakses `http://localhost:3000`. Masukkan jenis barang bekas dan beratnya, lalu kalkulator akan menampilkan harga berdasarkan data terkini dari database.
-
-## Kontribusi
-Kami menerima kontribusi dari siapa saja! Ikuti langkah-langkah berikut untuk berkontribusi:
-
-1. Fork repositori ini.
-2. Buat branch baru:
-    ```bash
-    git checkout -b fitur-baru
-    ```
-3. Lakukan perubahan dan commit:
-    ```bash
-    git commit -m "Menambahkan fitur baru"
-    ```
-4. Push ke branch tersebut:
-    ```bash
-    git push origin fitur-baru
-    ```
-5. Buat Pull Request.
-
-## Lisensi
-Proyek ini dilisensikan di bawah [MIT License](LICENSE).
-
-## Kontak
-Jika ada pertanyaan, hubungi saya di:
-- Email: yana.aprilia@example.com
-- GitHub: [username](https://github.com/username)
-
-## Deskripsi 📄
-Waste Price Calculator adalah aplikasi yang memungkinkan pengguna untuk menghitung harga barang bekas berdasarkan jenis material seperti plastik, kertas, dan logam. Aplikasi ini dirancang untuk mendukung daur ulang dan membantu pengguna menghitung nilai barang bekas mereka.
-
-## Tabel Isi 📚
-- [Instalasi](#instalasi)
-- [Penggunaan](#penggunaan)
-- [Kontribusi](#kontribusi)
-- [Lisensi](#lisensi)
-- [Kontak](#kontak)
-
-## Instalasi 💻
-Untuk menjalankan aplikasi di lokal, ikuti langkah-langkah berikut:
-
-1. Clone repositori ini:
-    ```bash
-    git clone https://github.com/username/waste-price-calculator.git
-    ```
-2. Masuk ke direktori proyek:
-    ```bash
-    cd waste-price-calculator
-    ```
-3. Instal dependensi yang diperlukan:
-    ```bash
-    npm install
-    ```
-4. Jalankan aplikasi:
-    ```bash
-    npm start
-    ```
-
-## Penggunaan 🛠
-Setelah menginstal, buka aplikasi di browser dengan mengakses `http://localhost:3000`. Masukkan jenis barang bekas dan beratnya, lalu kalkulator akan menampilkan harga berdasarkan data terkini.
-
-## Demo 🎥
-![Demo](https://media.giphy.com/media/demo-animated.gif)
-
-## Fitur Utama 🚀
-- 🌍 Kalkulasi harga otomatis berdasarkan lokasi
-- 📱 Dukungan untuk perangkat mobile
-- 🔐 Keamanan data pengguna
-
-## Kontribusi 🤝
-Kami menerima kontribusi dari siapa saja! Ikuti langkah-langkah berikut:
-
-1. Fork repositori ini.
-2. Buat branch baru:
-    ```bash
-    git checkout -b fitur-baru
-    ```
-3. Lakukan perubahan dan commit:
-    ```bash
-    git commit -m "Menambahkan fitur baru"
-    ```
-4. Push ke branch tersebut:
-    ```bash
-    git push origin fitur-baru
-    ```
-5. Buat Pull Request.
-
-## Lisensi 📄
-Proyek ini dilisensikan di bawah [MIT License](LICENSE).
-
-## Kontak 📧
-Jika ada pertanyaan, hubungi saya di:
-- Email: yana.aprilia@example.com
-- GitHub: [username](https://github.com/username)
-
+## Author ✍🏻
+[@YanaAprilia](https://github.com/AnayAilirpa)
 
