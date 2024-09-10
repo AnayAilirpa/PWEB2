@@ -228,14 +228,313 @@ Berikut adalah hasil output dari kode pemrograman di atas.
 ## Tugas
 
 ### 1. Implementasikan kelas Person sebagai induk dari Dosen dan Mahasiswa.
+```php
+<?php
+class Person { // Membuat class Person
+    private $name; // membuat attribute name
+
+    public function __construct($name) { // inisialisasi class Person
+        $this->name = $name;
+    }
+}
+
+class Dosen extends Person { // membuat class Dosen
+    public $nidn; // membuat attribute nidn
+
+    public function __construct($name, $nidn) { // inisialisasi class Dosen
+        parent::__construct($name);
+        $this->nidn = $nidn;
+    }
+}
+
+class Mahasiswa extends Person { // membuat class Mahasiswa
+    public $nim; // membuat attribute nim
+
+    public function __construct($name, $nim) { // inisialisasi class Mahasiswa
+        parent::__construct($name);
+        $this->nim = $nim;
+    }
+}
+?>
+```
 
 ### 2. Gunakan konsep Inheritance untuk membuat hierarki kelas yang memungkinkan Dosen dan Mahasiswa memiliki atribut dan metode yang sesuai dengan perannya.
+```php
+<?php
+class Person { // Membuat class Person
+    protected $name; // membuat attribute name
+
+    public function __construct($name) { // inisialisasi class Person
+        $this->name = $name;
+    }
+
+    public function getName() { // method getName
+        return $this->name;
+    }
+}
+
+class Dosen extends Person { // membuat class Dosen
+    public $nidn; // membuat attribute nidn
+
+    public function __construct($name, $nidn) { // inisialisasi class Dosen
+        parent::__construct($name);
+        $this->nidn = $nidn;
+    }
+
+    public function getNIDN() { // method getNIDN
+        return $this->nidn;
+    }
+
+    public function setNIDN($nidn) { // method setNIDN
+        $this->nidn = $nidn;
+    }
+}
+
+class Mahasiswa extends Person { // membuat class Mahasiswa
+    public $nim; // membuat attribute nim
+
+    public function __construct($name, $nim) { // inisialisasi class Mahasiswa
+        parent::__construct($name);
+        $this->nim = $nim;
+    }
+
+    public function getNIM() { // method getNIM
+        return $this->nim;
+    }
+
+    public function setNIM($nim) { // method setNIM
+        $this->nim = $nim;
+    }
+}
+?>
+```
 
 ### 3. Terapkan Polymorphism dengan membuat metode getRole() di kelas Person dan override metode ini di kelas Dosen dan Mahasiswa untuk menampilkan peran yang berbeda.
+```php
+<?php
+class Person { // Membuat class Person
+    protected $name; // membuat attribute name
+
+    public function __construct($name) { // inisialisasi class Person
+        $this->name = $name;
+    }
+
+    public function getRole() { // method getRole
+        return "Person";
+    }
+
+    public function getName() { // method getName
+        return $this->name;
+    }
+}
+
+class Dosen extends Person { // membuat class Dosen
+    public $nidn; // membuat attribute nidn
+
+    public function __construct($name, $nidn) { // inisialisasi class Dosen
+        parent::__construct($name);
+        $this->nidn = $nidn;
+    }
+
+    public function getNIDN() { // method getNIDN
+        return $this->nidn;
+    }
+
+    public function setNIDN($nidn) { // method setNIDN
+        $this->nidn = $nidn;
+    }
+
+    public function getRole() { // method getRole
+        return "Dosen";
+    }
+}
+
+class Mahasiswa extends Person { // membuat class Mahasiswa
+    public $nim; // membuat attribute nim
+
+    public function __construct($name, $nim) { // inisialisasi class Mahasiswa
+        parent::__construct($name);
+        $this->nim = $nim;
+    }
+
+    public function getNIM() { // method getNIM
+        return $this->nim;
+    }
+
+    public function setNIM($nim) { // method setNIM
+        $this->nim = $nim;
+    }
+
+    public function getRole() { // method getRole
+        return "Mahasiswa";
+    }
+}
+?>
+```
 
 ### 4. Gunakan Encapsulation untuk melindungi atribut nidn di kelas Dosen dan nim di kelas Mahasiswa.
+```php
+<?php
+class Person { // Membuat class Person
+    protected $name; // membuat attribute name
+
+    public function __construct($name) { // inisialisasi class Person
+        $this->name = $name;
+    }
+
+    public function getRole() { // method getRole
+        return "Person";
+    }
+
+    public function getName() { // method getName
+        return $this->name;
+    }
+}
+
+class Dosen extends Person { // membuat class Dosen
+    private $nidn; // membuat attribute nidn
+
+    public function __construct($name, $nidn) { // inisialisasi class Dosen
+        parent::__construct($name);
+        $this->nidn = $nidn;
+    }
+
+    public function getNIDN() { // method getNIDN
+        return $this->nidn;
+    }
+
+    public function setNIDN($nidn) { // method setNIDN
+        $this->nidn = $nidn;
+    }
+
+    public function getRole() { // method getRole
+        return "Dosen";
+    }
+}
+
+class Mahasiswa extends Person { // membuat class Mahasiswa
+    private $nim; // membuat attribute nim
+    
+    public function __construct($name, $nim) { // inisialisasi class Mahasiswa
+        parent::__construct($name);
+        $this->nim = $nim;
+    }
+
+    public function getNIM() { // method getNIM
+        return $this->nim;
+    }
+
+    public function setNIM($nim) { // method setNIM
+        $this->nim = $nim;
+    }
+
+    public function getRole() { // method getRole
+        return "Mahasiswa";
+    }
+}
+?>
+```
 
 ### 5. Buat kelas abstrak Jurnal dan implementasikan konsep Abstraction dengan membuat kelas turunan JurnalDosen dan JurnalMahasiswa yang masing-masing memiliki cara tersendiri untuk mengelola pengajuan jurnal.
+```php
+<?php
+class Person { // Membuat class Person
+    protected $name; // membuat attribute name
+
+    public function __construct($name) { // inisialisasi class Person
+        $this->name = $name;
+    }
+
+    public function getRole() { // method getRole
+        return "Person";
+    }
+
+    public function getName() { // method getName
+        return $this->name;
+    }
+}
+
+class Dosen extends Person { // membuat class Dosen
+    private $nidn; // membuat attribute nidn
+
+    public function __construct($name, $nidn) { // inisialisasi class Dosen
+        parent::__construct($name);
+        $this->nidn = $nidn;
+    }
+
+    public function getNIDN() { // method getNIDN
+        return $this->nidn;
+    }
+
+    public function setNIDN($nidn) { // method setNIDN
+        $this->nidn = $nidn;
+    }
+
+    public function getRole() { // method getRole
+        return "Dosen";
+    }
+}
+
+class Mahasiswa extends Person { // membuat class Mahasiswa
+    private $nim; // membuat attribute nim
+    
+    public function __construct($name, $nim) { // inisialisasi class Mahasiswa
+        parent::__construct($name);
+        $this->nim = $nim;
+    }
+
+    public function getNIM() { // method getNIM
+        return $this->nim;
+    }
+
+    public function setNIM($nim) { // method setNIM
+        $this->nim = $nim;
+    }
+
+    public function getRole() { // method getRole
+        return "Mahasiswa";
+    }
+}
+
+abstract class Jurnal { // membuat class abstrak Jurnal
+    protected $title;
+
+    public function __construct($title) { // inisialisasi class abstrak Jurnal
+        $this->title = $title;
+    }
+
+    abstract public function submitJurnal(); // method abstract submitJurnal
+}
+
+class JurnalDosen extends Jurnal { // membuat class JurnalDosen 
+    private $dosen;
+
+    public function __construct($title, Dosen $dosen) { // inisialisasi class JurnalDosen
+        parent::__construct($title);
+        $this->dosen = $dosen;
+    }
+
+    public function submitJurnal() { // method submitJurnal
+        return "Dosen " . $this->dosen->getName() . " (NIDN: " . $this->dosen->getNIDN() . ") submitted the journal: '" . $this->title . "'";
+    }
+}
+
+class JurnalMahasiswa extends Jurnal { // membuat class JurnalMahasiswa
+    private $mahasiswa;
+
+    public function __construct($title, Mahasiswa $mahasiswa) { // inisialisasi class JurnalMahasiswa
+        parent::__construct($title);
+        $this->mahasiswa = $mahasiswa;
+    }
+
+    public function submitJurnal() { // method submitJurnal
+        return "Mahasiswa " . $this->mahasiswa->getName() . " (NIM: " . $this->mahasiswa->getNIM() . ") submitted the journal: '" . $this->title . "'";
+    }
+}
+?>
+```
+
+
 
 ## Kesimpulan
 Melalui tugas ini, saya berhasil menerapkan empat konsep dasar OOP (Pemrograman Berorientasi Objek) yaitu Inheritance, Polymorphism, Encapsulation, dan Abstraction menggunakan PHP. Setiap konsep diterapkan dalam studi kasus sederhana yang melibatkan Dosen, Mahasiswa, dan pengelolaan Jurnal. Dengan Inheritance, saya dapat membuat kelas yang lebih efisien karena Dosen dan Mahasiswa bisa mewarisi atribut dan metode dari kelas induk. Polymorphism memungkinkan metode yang sama menghasilkan keluaran berbeda sesuai konteks, sedangkan Encapsulation membantu melindungi data sensitif seperti NIM dan NIDN. Abstraction digunakan untuk menyederhanakan pengelolaan jurnal dengan membuat kelas abstrak yang fleksibel. Tugas ini menunjukkan bagaimana OOP membuat kode lebih rapi, mudah dikelola, dan fleksibel untuk dikembangkan. Konsep-konsep ini sangat membantu dalam membangun aplikasi yang lebih baik dan terstruktur.
