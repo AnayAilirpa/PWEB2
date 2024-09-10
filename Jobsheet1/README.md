@@ -35,6 +35,8 @@ $mahasiswa1 = new Mahasiswa("Yana Aprilia", "230202047", "Komputer dan Bisnis");
 echo $mahasiswa1->tampilData(); 
 ?>
 ```
+Berikut adalah hasil output dari kode pemrograman di atas.
+![image](https://github.com/user-attachments/assets/ce04363e-40a3-4fae-8fcc-a2904a98bef3)
 
 ### 2. Encapsulation
 Dalam tugas ini, saya menerapkan **Encapsulation** dengan mengubah atribut dalam class Mahasiswa menjadi `private`. Untuk mengakses dan mengubah data, saya membuat metode **getter** dan **setter** untuk atribut `nama`, `nim`, dan `jurusan`. Ini mendemonstrasikan kontrol akses terhadap atribut menggunakan metode getter dan setter.
@@ -79,6 +81,8 @@ $mahasiswa1->setMahasiswa("AnayAilirpa", "230202047", "Komputer dan Bisnis");
 echo $mahasiswa1->getMahasiswa();  
 ?>
 ```
+Berikut adalah hasil output dari kode pemrograman di atas.
+![image](https://github.com/user-attachments/assets/d46449e4-6fa7-4004-a462-0982a19dc143)
 
 ### 3. Inheritance
 Saya membuat class **Pengguna** yang berisi atribut `nama` dan metode **getNama()**. Kemudian, saya membuat class **Dosen** yang mewarisi class Pengguna dan menambahkan atribut `mataKuliah`. Saya juga menginstansiasi objek dari class Dosen dan menampilkan data dosen dengan memanfaatkan inheritance.
@@ -125,6 +129,8 @@ $dosen1 = new Dosen("Yana Aprilia", "Pemrograman Web 2");
 echo $dosen1->getNama()."<br>"; 
 ?>
 ```
+Berikut adalah hasil output dari kode pemrograman di atas.
+![image](https://github.com/user-attachments/assets/c705a1e0-e0b4-4230-944f-50661918e7bd)
 
 ### 4. Polymorphism
 Polymorphism diimplementasikan dengan cara membuat class **Pengguna** yang memiliki metode **aksesFitur()**. Saya mengimplementasikan metode ini secara berbeda di class **Dosen** dan **Mahasiswa**. Dengan cara ini, ketika saya memanggil metode aksesFitur() dari objek dosen dan mahasiswa, mereka memberikan hasil yang berbeda sesuai dengan implementasi masing-masing.
@@ -177,6 +183,8 @@ $mahasiswa1 = new Mahasiswa("Yana Aprilia", "230202047", "Komputer dan Bisnis");
 echo $mahasiswa1->aksesFitur();
 ?>
 ```
+Berikut adalah hasil output dari kode pemrograman di atas.
+![image](https://github.com/user-attachments/assets/213e184e-f0ca-4db6-9165-72d530210926)
 
 ### 5. Abstraction
 Saya menerapkan **Abstraction** dengan membuat class abstrak **Pengguna** yang memiliki metode abstrak **aksesFitur()**. Class Mahasiswa dan Dosen mengimplementasikan metode abstrak ini dengan cara mereka sendiri. Saya mendemonstrasikan abstraksi ini dengan memanggil metode aksesFitur() dari objek yang diinstansiasi dari class Mahasiswa dan Dosen.
@@ -227,6 +235,8 @@ $mahasiswa1 = new Mahasiswa("Yana Aprilia", "230202047", "Komputer dan Bisnis");
 echo $mahasiswa1->aksesFitur();
 ?>
 ```
+Berikut adalah hasil output dari kode pemrograman di atas.
+![image](https://github.com/user-attachments/assets/7b1a76d9-b2fe-4b24-b4e4-5695573eea68)
 
 ## Kesimpulan
 Tugas ini berhasil mengimplementasikan prinsip-prinsip OOP, yaitu Encapsulation, Inheritance, Polymorphism, dan Abstraction dalam PHP. Konsep dasar OOP membantu dalam merancang kode yang modular, mudah dipelihara, dan reusable. Dengan memecah program menjadi objek dan memanfaatkan konsep-konsep ini, kode menjadi lebih terstruktur dan lebih mudah untuk dikembangkan dan dikelola.
