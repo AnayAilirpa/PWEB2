@@ -32,7 +32,9 @@ $mhs2->tampilkanData();
 ?>
 ```
 Berikut adalah output dari kode pemrograman di atas.
-![image](https://github.com/user-attachments/assets/f096960c-bc48-481b-9b59-be2977a172d4)
+
+![image](https://github.com/user-attachments/assets/38baa226-7587-42d4-ba3c-d7d86f594a00)
+
 > Dalam tahap ini dapat diketahui bahwa saat kode program dijalankan, metode **tampilData()** tidak dapat mengambil data dari atribut `nama`, `nim`, dan `jurusan` dengan metode **tampilkanData()** tanpa **Constructor**.
 
 ### 2. Implementasi Constructor
@@ -64,7 +66,9 @@ $mhs2->tampilkanData();
 ?>
 ```
 Berikut adalah output dari kode pemrograman di atas.
-![image](https://github.com/user-attachments/assets/05aea27b-ffce-46d4-a324-366ae13456e6)
+
+![image](https://github.com/user-attachments/assets/a256d590-2806-4a18-ade1-23e49a18c31f)
+
 > Melalui program di atas dapat diketahui, dengan menambahkan **Consctructor** metode **tampilkanData()** berhasil memanggil atribut `nama`, `nim`, dan `jurusan`.
 
 ### 3. Membuat Metode Tambahan
@@ -119,7 +123,9 @@ $mhs2->tampilkanData();
 ?>
 ```
 Berikut adalah output dari kode pemrograman di atas.
-![image](https://github.com/user-attachments/assets/65329dcf-342a-437d-9745-07d604d797f7)
+
+![image](https://github.com/user-attachments/assets/128881c5-04e7-4d51-a7c5-172dcfd08748)
+
 > Dengan menambahkan fungsi **updateJurusan()** dan mengatur perubahan pada data jurusan (dalam case diatas "Teknik Informatika"). Lalu memanggil kembali fungsi **tampilkanData()**, dan data hasil untuk atribut `jurusan` berubah yang awalnya "Komputer dan Bisnis" menjadi "Teknik Informatika".
 
 ### 4. Penggunaan Atribut dan Metode
@@ -189,18 +195,96 @@ $mhs2->tampilkanData();
 ?>
 ```
 Berikut adalah output dari kode pemrograman di atas.
-![image](https://github.com/user-attachments/assets/f5c04282-8a5f-4aa8-b1d7-f2e829b527b1)
+
+![image](https://github.com/user-attachments/assets/54271d5a-8077-4efb-ac46-eb4dd618cd06)
+
 > Dengan menambahkan fungsi **updateNim()** dan mengatur perubahan pada data nim (dalam case diatas "123456789"). Lalu memanggil kembali fungsi **tampilkanData()**, dan data hasil untuk atribut `nim` berubah menjadi "123456789".
 
 ## Tugas
 
-## 1. Implementasikan kelas Dosen dengan atribut nama, nip, dan mataKuliah.
+### 1. Implementasikan kelas Dosen dengan atribut nama, nip, dan mataKuliah.
+```php
+<?php
+//membuat class Dosen
+class Dosen {
+    //menambahkan atribut nama, nip, dan mataKuliah dengan akses publik.
+    public $nama;
+    public $nip;
+    public $mataKuliah;
+    
+    //inisialisasi class Dosen
+    public function __construct($nama, $nip, $mataKuliah) {
+        $this->nama = $nama;
+        $this->nip = $nip;
+        $this->mataKuliah = $mataKuliah;
+    }
+}
+?>
+```
 
-## 2. Buat metode tampilkanDosen() untuk menampilkan informasi dosen.
+### 2. Buat metode tampilkanDosen() untuk menampilkan informasi dosen.
+```php
+<?php
+//membuat class Dosen
+class Dosen {
+    //menambahkan atribut nama, nip, dan mataKuliah dengan akses publik.
+    public $nama;
+    public $nip;
+    public $mataKuliah;
+    
+    //inisialisasi class Dosen
+    public function __construct($nama, $nip, $mataKuliah) {
+        $this->nama = $nama;
+        $this->nip = $nip;
+        $this->mataKuliah = $mataKuliah;
+    }
 
-## 3. Buat objek dari kelas Dosen, dan gunakan metode tampilkanDosen() untuk menampilkan informasi tersebut.
+    //membuat method tampilDosen
+    public function tampilDosen() {
+        echo "Nama: ". $this->nama. "<br>";
+        echo "NIP: ". $this->nip. "<br>";
+        echo "Mata Kuliah: ". $this->mataKuliah. "<br><br>";
+    }
+}
+?>
+```
 
-## 4. Buat dokumentasi proyek dan unggah ke repository GitHub, menjelaskan proses pembuatan kelas, penggunaan metode, dan hasil output.
+### 3. Buat objek dari kelas Dosen, dan gunakan metode tampilkanDosen() untuk menampilkan informasi tersebut.
+```php
+<?php
+//membuat class Dosen
+class Dosen {
+    //menambahkan atribut nama, nip, dan mataKuliah dengan akses publik.
+    public $nama;
+    public $nip;
+    public $mataKuliah;
+    
+    //inisialisasi class Dosen
+    public function __construct($nama, $nip, $mataKuliah) {
+        $this->nama = $nama;
+        $this->nip = $nip;
+        $this->mataKuliah = $mataKuliah;
+    }
+
+    //membuat method tampilDosen
+    public function tampilDosen() {
+        echo "Nama: ". $this->nama. "<br>";
+        echo "NIP: ". $this->nip. "<br>";
+        echo "Mata Kuliah: ". $this->mataKuliah. "<br><br>";
+    }
+}
+
+//instansiasi class Dosen
+$dosen1 = new Dosen("Ana Febri Salusi", "12345", "Sastra Jawa");
+$dosen2 = new Dosen("Yana Aprilia", "13579", "Filsafat");
+
+//memanggil metode tampilDosen()
+$dosen1->tampilDosen();
+$dosen2->tampilDosen();
+?>
+```
+### 4. Output Tugas
+![image](https://github.com/user-attachments/assets/d4eb9f25-c73c-4e2e-b93d-c3e87cb28786)
 
 ## Kesimpulan
 Melalui tugas ini, saya telah berhasil memahami dan menerapkan konsep dasar pemrograman berorientasi objek dalam PHP, khususnya dalam membuat dan mengelola kelas dan objek. Saya juga belajar cara memanfaatkan constructor untuk menginisialisasi data awal serta bagaimana membuat metode untuk memodifikasi dan menampilkan data objek. Tugas ini memberikan fondasi yang kuat untuk penerapan OOP dalam pengembangan aplikasi berbasis PHP di masa yang akan datang.
