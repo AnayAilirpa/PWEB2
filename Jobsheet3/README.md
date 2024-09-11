@@ -42,7 +42,8 @@ echo "Student ID: ". $student->getStudentID(). "<br>"; // menampilkan attribute 
 ?>
 ```
 Berikut adalah hasil output dari kode pemrograman di atas.
-![image](https://github.com/user-attachments/assets/4629e662-7f75-4812-8668-0027817c8710)
+
+![image](https://github.com/user-attachments/assets/cf34d21b-1b2d-4285-8492-d508956726d6)
 
 ### 2. Polymorphism
 Polimorfisme diterapkan dengan overriding metode `getRole()` di kelas `Dosen` dan `Mahasiswa`. Kedua kelas ini mengoverride metode `getRole()` dari kelas Person untuk menampilkan peran masing-masing.
@@ -99,7 +100,8 @@ echo $teacher->getName(); // menampilkan attribute dalam objek Teacher
 ?>
 ```
 Berikut adalah hasil output dari kode pemrograman di atas.
-![image](https://github.com/user-attachments/assets/b2abc93f-9db6-42be-a2d2-22b153e54340)
+
+![image](https://github.com/user-attachments/assets/ad830081-bd4b-4060-aff3-d3995eb3f7ba)
 
 ### 3. Encapsulation
 Enkapsulasi digunakan untuk melindungi data sensitif seperti `nidn` (Nomor Induk Dosen Nasional) dan `nim` (Nomor Induk Mahasiswa). Atribut-atribut ini dibuat privat, dan metode setter dan getter disediakan untuk mengakses nilai-nilai tersebut secara aman.
@@ -170,7 +172,8 @@ echo $student->getName(); // menampilkan attribute dalam objek Student kembali
 ?>
 ```
 Berikut adalah hasil output dari kode pemrograman di atas.
-![image](https://github.com/user-attachments/assets/dfb0f5a6-3def-4978-bac7-beef6ab73324)
+
+![image](https://github.com/user-attachments/assets/fb24cfa6-d09a-45a5-aea9-dda7e3b28efe)
 
 ### 4. Abstraction
 Pada bagian ini, kelas abstrak `Jurnal` dibuat untuk menangani pengelolaan jurnal yang diimplementasikan oleh kelas `JurnalDosen` dan `JurnalMahasiswa`. Kedua kelas ini mengimplementasikan metode abstrak `getSubmissionDetails()` untuk menyediakan detail pengelolaan jurnal yang berbeda-beda sesuai peran masing-masing.
@@ -223,7 +226,8 @@ echo $offlineCourse->getCourseDetails(); // menampilkan objek OfflineCourse
 ?>
 ```
 Berikut adalah hasil output dari kode pemrograman di atas.
-![image](https://github.com/user-attachments/assets/23ead97d-8923-4c01-be43-fe75f507862b)
+
+![image](https://github.com/user-attachments/assets/7c1832c1-0723-4e6d-b0d4-580f6db75d28)
 
 ## Tugas
 
@@ -534,7 +538,130 @@ class JurnalMahasiswa extends Jurnal { // membuat class JurnalMahasiswa
 ?>
 ```
 
+### 6. Menampilkan output tugas
+```php
+<?php
+class Person { // Membuat class Person
+    protected $name; // membuat attribute name
 
+    public function __construct($name) { // inisialisasi class Person
+        $this->name = $name;
+    }
+
+    public function getRole() { // method getRole
+        return "Person";
+    }
+
+    public function getName() { // method getName
+        return $this->name;
+    }
+}
+
+class Dosen extends Person { // membuat class Dosen
+    private $nidn; // membuat attribute nidn
+
+    public function __construct($name, $nidn) { // inisialisasi class Dosen
+        parent::__construct($name);
+        $this->nidn = $nidn;
+    }
+
+    public function getNIDN() { // method getNIDN
+        return $this->nidn;
+    }
+
+    public function setNIDN($nidn) { // method setNIDN
+        $this->nidn = $nidn;
+    }
+
+    public function getRole() { // method getRole
+        return "Dosen";
+    }
+}
+
+class Mahasiswa extends Person { // membuat class Mahasiswa
+    private $nim; // Encapsulation: NIM bersifat private
+
+    public function __construct($name, $nim) { // inisialisasi class Mahasiswa
+        parent::__construct($name);
+        $this->nim = $nim;
+    }
+
+    public function getNIM() { // method getNIM
+        return $this->nim;
+    }
+
+    public function setNIM($nim) { // method setNIM
+        $this->nim = $nim;
+    }
+
+    public function getRole() { // method getRole
+        return "Mahasiswa";
+    }
+}
+
+abstract class Jurnal { // membuat class abstrak Jurnal
+    protected $title;
+
+    public function __construct($title) { // inisialisasi class abstrak Jurnal
+        $this->title = $title;
+    }
+
+    abstract public function submitJurnal(); // method abstract submitJurnal
+}
+
+class JurnalDosen extends Jurnal { // membuat class JurnalDosen 
+    private $dosen;
+
+    public function __construct($title, Dosen $dosen) { // inisialisasi class JurnalDosen
+        parent::__construct($title);
+        $this->dosen = $dosen;
+    }
+
+    public function submitJurnal() { // method submitJurnal
+        return "Dosen " . $this->dosen->getName() . " (NIDN: " . $this->dosen->getNIDN() . ") submitted the journal: '" . $this->title . "'";
+    }
+}
+
+class JurnalMahasiswa extends Jurnal { // membuat class JurnalMahasiswa
+    private $mahasiswa;
+
+    public function __construct($title, Mahasiswa $mahasiswa) { // inisialisasi class JurnalMahasiswa
+        parent::__construct($title);
+        $this->mahasiswa = $mahasiswa;
+    }
+
+    public function submitJurnal() { // method submitJurnal
+        return "Mahasiswa " . $this->mahasiswa->getName() . " (NIM: " . $this->mahasiswa->getNIM() . ") submitted the journal: '" . $this->title . "'";
+    }
+}
+
+// instansiasi class 
+$dosen = new Dosen("Yana Aprilia", "NIDN13579"); 
+$mahasiswa = new Mahasiswa("Ana Febri Salusi", "NIM12345");
+
+// menampilkan attribute
+echo $dosen->getName() . " adalah seorang " . $dosen->getRole(); 
+echo "<br>";
+echo $mahasiswa->getName() . " adalah seorang " . $mahasiswa->getRole(); 
+echo "<br><br>";
+
+// menetapkan attribute
+$dosen->setNIDN("54321"); 
+$mahasiswa->setNIM("98765"); 
+
+// instansiasi class
+$jurnalDosen = new JurnalDosen("AI Research Paper", $dosen); 
+$jurnalMahasiswa = new JurnalMahasiswa("Web Development Project", $mahasiswa); 
+
+// menampilkan attribute
+echo $jurnalDosen->submitJurnal(); 
+echo "<br>";
+echo $jurnalMahasiswa->submitJurnal(); 
+?>
+```
+Output Program:
+
+![image](https://github.com/user-attachments/assets/63ec4bf6-dc2e-4e11-8f10-6fd405b3f160)
 
 ## Kesimpulan
 Melalui tugas ini, saya berhasil menerapkan empat konsep dasar OOP (Pemrograman Berorientasi Objek) yaitu Inheritance, Polymorphism, Encapsulation, dan Abstraction menggunakan PHP. Setiap konsep diterapkan dalam studi kasus sederhana yang melibatkan Dosen, Mahasiswa, dan pengelolaan Jurnal. Dengan Inheritance, saya dapat membuat kelas yang lebih efisien karena Dosen dan Mahasiswa bisa mewarisi atribut dan metode dari kelas induk. Polymorphism memungkinkan metode yang sama menghasilkan keluaran berbeda sesuai konteks, sedangkan Encapsulation membantu melindungi data sensitif seperti NIM dan NIDN. Abstraction digunakan untuk menyederhanakan pengelolaan jurnal dengan membuat kelas abstrak yang fleksibel. Tugas ini menunjukkan bagaimana OOP membuat kode lebih rapi, mudah dikelola, dan fleksibel untuk dikembangkan. Konsep-konsep ini sangat membantu dalam membangun aplikasi yang lebih baik dan terstruktur.
