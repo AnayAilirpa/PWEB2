@@ -32,7 +32,7 @@ $mhs2->tampilkanData();
 ?>
 ```
 Berikut adalah output dari kode pemrograman di atas.
-
+![image](https://github.com/user-attachments/assets/f096960c-bc48-481b-9b59-be2977a172d4)
 > Dalam tahap ini dapat diketahui bahwa saat kode program dijalankan, metode **tampilData()** tidak dapat mengambil data dari atribut `nama`, `nim`, dan `jurusan` dengan metode **tampilkanData()** tanpa **Constructor**.
 
 ### 2. Implementasi Constructor
@@ -64,7 +64,7 @@ $mhs2->tampilkanData();
 ?>
 ```
 Berikut adalah output dari kode pemrograman di atas.
-
+![image](https://github.com/user-attachments/assets/05aea27b-ffce-46d4-a324-366ae13456e6)
 > Melalui program di atas dapat diketahui, dengan menambahkan **Consctructor** metode **tampilkanData()** berhasil memanggil atribut `nama`, `nim`, dan `jurusan`.
 
 ### 3. Membuat Metode Tambahan
@@ -119,7 +119,7 @@ $mhs2->tampilkanData();
 ?>
 ```
 Berikut adalah output dari kode pemrograman di atas.
-
+![image](https://github.com/user-attachments/assets/65329dcf-342a-437d-9745-07d604d797f7)
 > Dengan menambahkan fungsi **updateJurusan()** dan mengatur perubahan pada data jurusan (dalam case diatas "Teknik Informatika"). Lalu memanggil kembali fungsi **tampilkanData()**, dan data hasil untuk atribut `jurusan` berubah yang awalnya "Komputer dan Bisnis" menjadi "Teknik Informatika".
 
 ### 4. Penggunaan Atribut dan Metode
@@ -189,8 +189,18 @@ $mhs2->tampilkanData();
 ?>
 ```
 Berikut adalah output dari kode pemrograman di atas.
-
+![image](https://github.com/user-attachments/assets/f5c04282-8a5f-4aa8-b1d7-f2e829b527b1)
 > Dengan menambahkan fungsi **updateNim()** dan mengatur perubahan pada data nim (dalam case diatas "123456789"). Lalu memanggil kembali fungsi **tampilkanData()**, dan data hasil untuk atribut `nim` berubah menjadi "123456789".
+
+## Tugas
+
+## 1. Implementasikan kelas Dosen dengan atribut nama, nip, dan mataKuliah.
+
+## 2. Buat metode tampilkanDosen() untuk menampilkan informasi dosen.
+
+## 3. Buat objek dari kelas Dosen, dan gunakan metode tampilkanDosen() untuk menampilkan informasi tersebut.
+
+## 4. Buat dokumentasi proyek dan unggah ke repository GitHub, menjelaskan proses pembuatan kelas, penggunaan metode, dan hasil output.
 
 ## Kesimpulan
 Melalui tugas ini, saya telah berhasil memahami dan menerapkan konsep dasar pemrograman berorientasi objek dalam PHP, khususnya dalam membuat dan mengelola kelas dan objek. Saya juga belajar cara memanfaatkan constructor untuk menginisialisasi data awal serta bagaimana membuat metode untuk memodifikasi dan menampilkan data objek. Tugas ini memberikan fondasi yang kuat untuk penerapan OOP dalam pengembangan aplikasi berbasis PHP di masa yang akan datang.
