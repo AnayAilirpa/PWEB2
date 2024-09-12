@@ -4,8 +4,8 @@ class Pengguna {
     //menambah atribut nama dengan akses privat
     private $nama;
 
-    //inisialisi class Pengguna
-    public function __construct($nama) {
+    // Metode untuk mengatur nama
+    public function setNama($nama) {
         $this->nama = $nama;
     }
 
@@ -20,9 +20,8 @@ class Dosen extends Pengguna{
     //menambah atribut mataKuliah dengan akses privat
     private $mataKuliah;
 
-    //inisialisi class Dosen
-    public function __construct($nama, $mataKuliah) {
-        parent::__construct($nama);
+    // Metode untuk mengatur mataKuliah
+    public function setMataKuliah($mataKuliah) {
         $this->mataKuliah = $mataKuliah;
     }
 
@@ -34,8 +33,12 @@ class Dosen extends Pengguna{
 
 //instansiasi class Dosen
 echo "<p><b>3. Inheritance</b></p>";
-$dosen1 = new Dosen("Yana Aprilia", "Pemrograman Web 2");
-//output metode getNama
-echo $dosen1->getNama()."<br>"; 
+$dosen1 = new Dosen();
+
+// Mengatur nama 
+$dosen1->setNama("Yana Aprilia");
+
+// Output metode getNama 
+echo $dosen1->getNama();
 ?>
 
