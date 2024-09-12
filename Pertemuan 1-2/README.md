@@ -44,7 +44,7 @@ Penjelasan:
 
 Output: 
 
-![image](https://github.com/user-attachments/assets/6f3353e4-9451-4bc1-ac6a-7befe6e993db)
+![image](https://github.com/user-attachments/assets/8db8c0de-c01e-4252-8f65-aebcb06c8295)
 
 ### 2. Prinsip OOP
 * *Encapsulation*: Menyembunyikan detail implementasi dan hanya memberikan akses melalui metode tertentu.
@@ -76,7 +76,7 @@ echo $buku1->getJudul(); //output pemrograman php
 ```
 Output: 
 
-![image](https://github.com/user-attachments/assets/e07c9042-e7b2-459b-91e2-82b6c6cdda32)
+![image](https://github.com/user-attachments/assets/d0b7c1d6-2fb0-49aa-86d0-371d9f18c59d)
 
 * *Inheritance*: Kelas dapat mewarisi properti dan metode dari kelas lain.
 
@@ -114,7 +114,7 @@ echo $buku1->getNama(); //output: Pemrograman PHP
 ```
 Output: 
 
-![image](https://github.com/user-attachments/assets/89b1beff-8efb-44d9-8d38-51cf2ff1fd2c)
+![image](https://github.com/user-attachments/assets/ff00437d-90e0-4c6b-904c-0dbaf3acf016)
 
 * *Polymorphism*: Metode yang sama dapat memiliki implementasi berbeda dalam class yang berbeda.
 
@@ -161,7 +161,7 @@ cetakSuara($kucing); // output: Hewan membuat suara tapi Kucing berkata 'Meong'
 ```
 Output:
 
-![image](https://github.com/user-attachments/assets/0fd256fd-6de4-47c6-b690-ef6f4fb794de)
+![image](https://github.com/user-attachments/assets/89f3ce65-ad49-4fd7-829c-3c08547e895e)
 
 * *Abstraction*: Menyembunyikan detail implementasi dan hanya menampilkan fungsi penting.
 
@@ -204,6 +204,6 @@ tampilkanGambar($persegi); // output: Menggambar Persegi
 ```
 Output:
 
-![image](https://github.com/user-attachments/assets/e0d53c53-6737-45dc-9d97-73d6f4d99d23)
+![image](https://github.com/user-attachments/assets/89a9b870-30e0-4478-a50e-abf0ccfaa613)
 
 
