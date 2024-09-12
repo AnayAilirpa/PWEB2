@@ -8,7 +8,6 @@ Saya telah membuat class **Mahasiswa** yang memiliki atribut `nama`, `nim`, dan 
 
 ```php
 <?php
-<?php
 //membuat class Mahasiswa
 class Mahasiswa {
     //mengubah atribut nama, nim, dan jurusan menjadi akses privat
@@ -49,11 +48,6 @@ class Mahasiswa {
     private $nama;
     private $nim;
     private $jurusan;
-    
-    //membuat metode tampilData untuk menampilkan data mahasiswa
-    public function tampilData() {
-        return "Nama: " . $this->nama . "<br> NIM: " . $this->nim . "<br> Jurusan: " . $this->jurusan . "<br>";
-    }
 
     //metode getter
     public function getMahasiswa() {
@@ -100,7 +94,7 @@ class Pengguna {
     //menambah atribut nama dengan akses privat
     private $nama;
 
-    // Metode untuk mengatur nama
+    // Metode setNama 
     public function setNama($nama) {
         $this->nama = $nama;
     }
@@ -116,7 +110,7 @@ class Dosen extends Pengguna{
     //menambah atribut mataKuliah dengan akses privat
     private $mataKuliah;
 
-    // Metode untuk mengatur mataKuliah
+    // Metode setMataKuliah
     public function setMataKuliah($mataKuliah) {
         $this->mataKuliah = $mataKuliah;
     }
