@@ -5,11 +5,6 @@ class Mahasiswa {
     private $nama;
     private $nim;
     private $jurusan;
-    
-    //membuat metode tampilData untuk menampilkan data mahasiswa
-    public function tampilData() {
-        return "Nama: " . $this->nama . "<br> NIM: " . $this->nim . "<br> Jurusan: " . $this->jurusan . "<br>";
-    }
 
     //metode getter
     public function getMahasiswa() {
