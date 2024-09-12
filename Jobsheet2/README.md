@@ -35,7 +35,7 @@ Berikut adalah output dari kode pemrograman di atas.
 
 ![image](https://github.com/user-attachments/assets/38baa226-7587-42d4-ba3c-d7d86f594a00)
 
-> Dalam tahap ini dapat diketahui bahwa saat kode program dijalankan, metode **tampilData()** tidak dapat mengambil data dari atribut `nama`, `nim`, dan `jurusan` dengan metode **tampilkanData()** tanpa **Constructor**.
+> Dalam tahap ini dapat diketahui bahwa saat kode program dijalankan, metode `tampilData()` tidak dapat mengambil data dari atribut `nama`, `nim`, dan `jurusan` dengan metode `tampilkanData()` tanpa **Constructor**.
 
 ### 2. Implementasi Constructor
 Pada tahap ini, saya menambahkan **constructor** ke dalam class Mahasiswa untuk menginisialisasi nilai dari atribut `nama`, `nim`, dan `jurusan`. Constructor ini membantu mengatur nilai awal atribut ketika objek pertama kali dibuat, sehingga data mahasiswa langsung terisi saat objek diinstansiasi.
@@ -69,7 +69,7 @@ Berikut adalah output dari kode pemrograman di atas.
 
 ![image](https://github.com/user-attachments/assets/a256d590-2806-4a18-ade1-23e49a18c31f)
 
-> Melalui program di atas dapat diketahui, dengan menambahkan **Consctructor** metode **tampilkanData()** berhasil memanggil atribut `nama`, `nim`, dan `jurusan`.
+> Melalui program di atas dapat diketahui, dengan menambahkan **Consctructor** metode `tampilkanData()` berhasil memanggil atribut `nama`, `nim`, dan `jurusan`.
 
 ### 3. Membuat Metode Tambahan
 Untuk memberikan fleksibilitas dalam pengelolaan data mahasiswa, saya membuat metode **updateJurusan()** yang memungkinkan perubahan jurusan setelah objek dibuat. Metode ini menerima input jurusan baru dan memperbarui atribut `jurusan` pada objek mahasiswa.
@@ -126,7 +126,7 @@ Berikut adalah output dari kode pemrograman di atas.
 
 ![image](https://github.com/user-attachments/assets/128881c5-04e7-4d51-a7c5-172dcfd08748)
 
-> Dengan menambahkan fungsi **updateJurusan()** dan mengatur perubahan pada data jurusan (dalam case diatas "Teknik Informatika"). Lalu memanggil kembali fungsi **tampilkanData()**, dan data hasil untuk atribut `jurusan` berubah yang awalnya "Komputer dan Bisnis" menjadi "Teknik Informatika".
+> Dengan menambahkan metode `updateJurusan()` dan mengatur perubahan pada data jurusan (dalam case diatas "Teknik Informatika"). Lalu memanggil kembali metode `tampilkanData()`, dan data hasil untuk atribut `jurusan` berubah yang awalnya "Komputer dan Bisnis" menjadi "Teknik Informatika".
 
 ### 4. Penggunaan Atribut dan Metode
 Langkah terakhir adalah mengubah nilai atribut `nim` dengan menggunakan metode setter. Setelah nilai diubah, saya kembali memanggil metode **tampilkanData()** untuk melihat data mahasiswa yang sudah diperbarui.
@@ -198,7 +198,7 @@ Berikut adalah output dari kode pemrograman di atas.
 
 ![image](https://github.com/user-attachments/assets/54271d5a-8077-4efb-ac46-eb4dd618cd06)
 
-> Dengan menambahkan fungsi **updateNim()** dan mengatur perubahan pada data nim (dalam case diatas "123456789"). Lalu memanggil kembali fungsi **tampilkanData()**, dan data hasil untuk atribut `nim` berubah menjadi "123456789".
+> Dengan menambahkan metode `updateNim()` dan mengatur perubahan pada attribut `nim` (dalam case diatas "123456789"). Lalu memanggil kembali metode `tampilkanData()`, dan data hasil untuk atribut `nim` berubah menjadi "123456789".
 
 ## Tugas
 
