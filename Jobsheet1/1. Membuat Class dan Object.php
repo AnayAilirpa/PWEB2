@@ -6,8 +6,8 @@ class Mahasiswa {
     public $nim;
     public $jurusan;
     
-    //membuat metode tampilData untuk menampilkan data mahasiswa
-    public function tampilData() {
+    //membuat metode tampilkanData untuk menampilkan data mahasiswa
+    public function tampilkanData() {
         return "Nama: " . $this->nama . "<br> NIM: " . $this->nim . "<br> Jurusan: " . $this->jurusan . "<br>";
     }
 }
@@ -21,5 +21,5 @@ $mahasiswa1->nim = "230202047";
 $mahasiswa1->jurusan = "Komputer dan Bisnis";
 
 //menampilkan data mahasiswa1
-echo $mahasiswa1->tampilData();
+echo $mahasiswa1->tampilkanData();
 ?>
