@@ -4,7 +4,7 @@ class Pengguna {
     //menambah atribut nama dengan akses privat
     private $nama;
 
-    // Metode untuk mengatur nama
+    // Metode setNama
     public function setNama($nama) {
         $this->nama = $nama;
     }
@@ -20,7 +20,7 @@ class Dosen extends Pengguna{
     //menambah atribut mataKuliah dengan akses privat
     private $mataKuliah;
 
-    // Metode untuk mengatur mataKuliah
+    // Metode setMataKuliah
     public function setMataKuliah($mataKuliah) {
         $this->mataKuliah = $mataKuliah;
     }
